@@ -32,7 +32,9 @@ function makeEventEmitter (){
         payload, 
         action: 'emitted'
       })
-      emitter.emit(event, payload)
+      setTimeout(() => {
+        emitter.emit(event, payload)
+      }, 0)
     },
 
     getEventLog: () => eventLog,
